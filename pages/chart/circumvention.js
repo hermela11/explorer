@@ -4,7 +4,6 @@ import { Container, Heading } from 'ooni-components'
 import { FormattedMessage } from 'react-intl'
 import axios from 'axios'
 
-import Layout from 'components/Layout'
 import NavBar from 'components/NavBar'
 import { MetaTags } from 'components/dashboard/MetaTags'
 import { Form } from 'components/dashboard/Form'
@@ -40,7 +39,7 @@ const DashboardCircumvention = ({ availableCountries }) => {
   }, [router, query])
 
   return (
-    <Layout>
+    <React.Fragment>
       <MetaTags />
       <NavBar />
       <Container>
@@ -50,7 +49,7 @@ const DashboardCircumvention = ({ availableCountries }) => {
           <Charts />
         </React.Fragment>}
       </Container>
-    </Layout>
+    </React.Fragment>
   )
 }
 

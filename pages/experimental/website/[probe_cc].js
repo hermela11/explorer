@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { Container } from 'ooni-components'
 
-import Layout from '../../../components/Layout'
 import NavBar from '../../../components/NavBar'
 import WebsiteInCountry from '../../../components/aggregation/website/WebsiteInCountry'
 import { withDebugProvider } from '../../../components/aggregation/DebugContext'
@@ -13,7 +12,7 @@ const WebsiteInCountryPage = () => {
   const { query } = router
   query.axis_x = 'measurement_start_day'
   return (
-    <Layout>
+    <React.Fragment>
       <Head>
         <title>
           {`${query.input} in ${query.probe_cc}`}
@@ -23,7 +22,7 @@ const WebsiteInCountryPage = () => {
       <Container>
         <WebsiteInCountry params={query} />
       </Container>
-    </Layout>
+    </React.Fragment>
   )
 }
 

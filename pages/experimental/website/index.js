@@ -67,7 +67,7 @@ const WebsiteAnalytics = () => {
   }, [query])
 
   return (
-    <Layout>
+    <React.Fragment>
       <Head>
         <title> Website Centric Charts </title>
       </Head>
@@ -87,7 +87,7 @@ const WebsiteAnalytics = () => {
           </Box>
         </Flex>
       </Container>
-    </Layout>
+    </React.Fragment>
   )
 }
 

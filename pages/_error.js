@@ -26,7 +26,7 @@
 
 //   render500 (errors) {
 //     return (
-//       <Layout>
+//       <React.Fragment>
 //         <Head>
 //           <title> Unknown Error </title>
 //         </Head>
@@ -44,7 +44,7 @@
 //             </Box>}
 //           </FullHeightFlex>
 //         </Container>
-//       </Layout>
+//       </React.Fragment>
 //     )
 //   }
 

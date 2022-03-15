@@ -11,15 +11,12 @@ import {
 } from 'ooni-components'
 import useSWR from 'swr'
 
-import Layout from '../../components/Layout'
 import NavBar from '../../components/NavBar'
 import { MATContextProvider } from '../../components/aggregation/mat/MATContext'
 import { StackedBarChart } from '../../components/aggregation/mat/StackedBarChart'
 import { FunnelChart } from '../../components/aggregation/mat/FunnelChart'
 import { Form } from '../../components/aggregation/mat/Form'
 import { axiosResponseTime } from '../../components/axios-plugins'
-import { withDebugProvider, useDebugContext } from '../../components/aggregation/DebugContext'
-import { Debug } from '../../components/aggregation/Debug'
 import TableView from 'components/aggregation/mat/TableView'
 
 const baseURL = process.env.NEXT_PUBLIC_MEASUREMENTS_URL
@@ -90,7 +87,7 @@ const MeasurementAggregationToolkit = ({ testNames }) => {
 
   return (
     <MATContextProvider>
-      <Layout>
+      <React.Fragment>
         <Head>
           <title>OONI MAT</title>
         </Head>
@@ -128,7 +125,7 @@ const MeasurementAggregationToolkit = ({ testNames }) => {
             </Box>}
           </Flex>
         </Container>
-      </Layout>
+      </React.Fragment>
     </MATContextProvider>
   )
 }
